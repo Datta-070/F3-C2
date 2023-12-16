@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+    --top-bg: black;
+    --bottom-bg: #191919;
+    --blue: #4EA8DE;
+    --purple: #5E60CE;
+    --btnbg: #1E6F9F;
+    --cardbg: #262626;
+    --sticker: #333333;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--top-bg);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid gray;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 17%;
+    gap: 12px;
+}
+
+.bottom {
+    height: max-content;
+    display: flex;
+    background: var(--bottom-bg);
+    border: none;
+    justify-content: center;
+    height: -webkit-fill-available;
+}
+
+.top>span {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+legend {
+    align-self: center;
+    display: flex;
+    margin: auto;
+    gap: 12px;
+    width: 80%;
+}
+
+.purple {
+    color: var(--purple);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+#addBtn {
+    background: var(--btnbg);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    color: white;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#addBtn:hover {
+    scale: 1.1;
+    background-color: var(--purple);
+}
+
+#search {
+    width: 60%;
+}
+
+legend input,
+select {
+    background: var(--cardbg);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 16px;
+    padding-inline: 15px;
+    color: white;
+    /* width: inherit; */
+}
+
+legend input ::placeholder {
+    color: white;
+}
+
+.content {
+    margin-top: 50px;
+    width: 56%;
+    /* border: 2px solid pink; */
+}
+
+.sticker {
+    border-radius: 15px;
+    color: white;
+    background: var(--sticker);
+    padding: 5px 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.content-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task {
+    display: flex;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.disp {
+    display: none !important;
+}
+
+.nothing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: grey;
+    gap: 20px;
+}
+
+.fa-clipboard-list {
+    font-size: 55px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 12px;
+    align-items: center;
+    border-radius: 12px;
+    border: 2px solid var(--sticker);
+    gap: 10px;
+}
+
+.body {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#card-foot {
+    display: flex;
+    gap: 12px;
+    align-self: start;
+    background: var(--sticker);
+    border-radius: 12px;
+    font-size: 10px;
+    width: 100%;
+}
+
+.card>input {
+    border-radius: 50px;
+}
+
+.card p {
+    color: grey !important;
+    width: 90%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+/*Media Queries */
+
+@media only screen and (max-width: 600px){
+    form{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+    .input{
+        margin-top: 20px;
+        min-width: 85%;
+    }
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <link rel="shortcut icon" href="assets/plus.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+        integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main id="main">
+        <div class="top">
+            <img height="36px" src="assets/rocket.svg" alt="no-img">
+            <span>
+                <span class="blue">to</span><span class="purple">do</span>
+            </span>
+        </div>
+
+
+        <fieldset class="bottom">
+            <legend>
+                <form action="">
+                    <input class="input" type="text" required id="search" name="text" placeholder="Enter Your To-do List Task">
+                    <input type="date" id="dateofissue" required name="dateofissue">
+
+                    <select name="priority" required id="priority">
+                        <option value="low">Low</option>
+                        <option value="high">High</option>
+                    </select>
+
+                    <select name="tasktype" required id="tasktype" aria-placeholder="select">
+                        <option value="To-Do">To-Do</option>
+                        <option value="Started">Started</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+
+                    <button type="submit" name="date" id="addBtn">Add <img src="assets/plus.svg" alt="no-img"></button>
+                </form>
+            </legend>
+            <div class="content">
+                <div class="content-row">
+                    <div class="row">
+                        <div class="col">
+                            <span class="blue">To Do</span> <span id="todoshow" class="sticker">0</span>
+                        </div>
+                        <div class="col">
+                            <span class="purple">High Priority</span> <span id="todohigh" class="sticker">0</span>
+                        </div>
+                    </div>
+                    <div class="task" id="todo">
+                        <div id="nothing" class="nothing">
+                            <i class="fa fa"></i>
+                            <h2>You have no To-do Items As of now !</h2>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col">
+                            <span class="blue">Started</span> <span id="startedshow" class="sticker">0</span>
+                        </div>
+                        <div class="col">
+                            <span class="purple">High Priority</span> <span id="starthigh" class="sticker">0</span>
+                        </div>
+                    </div>
+
+                    <div class="task" id="started"></div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col">
+                            <span class="blue">Completed</span> <span id="compshow" class="sticker">0</span>
+                        </div>
+                        <div class="col">
+                            <span class="purple">High Priority</span> <span id="comphigh" class="sticker">0</span>
+                        </div>
+                    </div>
+
+                    <div class="task" id="completed"></div>
+
+                    <hr>
+                </div>
+            </div>
+        </fieldset>
+
+    </main>
+    <script src="script.js"></script>
+    <script src="edit.js"></script>
+    <script src="https://kit.fontawesome.com/20d20d5b18.js" crossorigin="anonymous"></script>
+</body>
+</html>
